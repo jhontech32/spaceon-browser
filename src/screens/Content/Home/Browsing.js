@@ -1,0 +1,26 @@
+import React, { Component } from 'react'
+import { TouchableOpacity } from 'react-native'
+import { Icon } from 'native-base'
+
+import color from 'theme/color'
+
+class Settings extends Component {
+  render () {
+    const { navigation } = this.props
+
+    console.log('navigation at settings', navigation)
+
+    return (
+      <TouchableOpacity
+        onPress={() => navigation.navigate('Browsing')}
+      >
+        <Icon
+          name="earth"
+          type="earth"
+          style={{ fontSize: 25, color: color.textIcons }}
+        />
+      </TouchableOpacity>
+    )
+  }
+}
+export default Settings
